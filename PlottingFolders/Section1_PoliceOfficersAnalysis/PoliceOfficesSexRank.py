@@ -38,14 +38,28 @@ for k in range(0,len(df_poblacio["REGIO_D"].values)):
         ratio += [100*woman[-1]/(man[-1]+woman[-1])]
         rank_ratio += [100*ranked_woman[-1]/(ranked_man[-1]+ranked_woman[-1])]
 
-plt.figure(1)
-plt.plot(total)
-plt.plot(man)  
-plt.plot(woman)
+
+fig, ax = plt.subplots(1, figsize=(6,4))
+
+ax.plot(total, marker="o", color="black", label="Total")
+ax.plot(man, marker="s", color = "teal", label="Man")
+ax.plot(woman, marker="^", color="crimson", label="Woman")
+ax.set_ylabel("Number of Police Officers")
+ax.legend()
+ax.set_xticklabels(df_poblacio["REGIO_C"].values,rotation=45,fontsize=10)
+plt.tight_layout()
 
 
-plt.figure(2)
-plt.plot(ratio)
-plt.plot(rank_ratio)
+#plt.xticks(np.arange(0,len(df_poblacio["REGIO_C"].values)+1, 1.0))
+
+fig2, ax2 = plt.subplots(1, figsize=(6,4))
+
+ax2.plot(ratio, marker="o", color="forestgreen", label="All Ranks")
+ax2.plot(rank_ratio, marker="o", color = "orange", label="Rank > Caporal")
+ax2.set_ylabel("Female proportion [%]")
+
+ax2.set_xticklabels(df_poblacio["REGIO_C"].values,rotation=45,fontsize=10)
+ax2.legend()
+plt.tight_layout()
 
 plt.show()  
