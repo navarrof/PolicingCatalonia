@@ -9,10 +9,11 @@ Folder_DadesOrganitzatives = "C:/Users/naar/Desktop/Araceli_NF/OtherStuff/Aracel
 df_poblacio = pd.read_csv(Folder_DadesOrganitzatives+ "Regions_policials_Poblacio.csv")
 df_comisaries = pd.read_csv(Folder_DadesOrganitzatives + "Comissaries_de_districte.csv")
 
-names, n_comisaries, poblacio, ratio = [],[], [],[]
+names = ["Ebre", "Girona", "Metro Barcelona", "Metropolitana", "Metropolitana Nord", "Pirineu","Ponent", "Tarragona","Central"]
+n_comisaries, poblacio, ratio = [],[], []
+
 for k in range(0,len(df_poblacio["REGIO_C"].values)):
-    names += [df_poblacio["REGIO_C"].values[k]]
-    cond = df_comisaries["REGIO_C"].values == names[-1]
+    cond = df_comisaries["REGIO_C"].values == names[k]
     n_comisaries += [len(df_comisaries["REGIO_C"].values[cond])]
     poblacio += [df_poblacio["REGIO_POB"].values[k]]
 

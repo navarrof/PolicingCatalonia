@@ -31,6 +31,7 @@ def PlotMainRegionsMapPopulation():
                         featureidkey = "properties.REGIO_C",
                         color="REGIO_POB",
                         color_continuous_scale="Reds")
+    fig.update_traces( marker_line_width=2) 
   
     #fig.add_scattergeo(
     #                    geojson=geojson,
@@ -49,7 +50,7 @@ def PlotMainRegionsMapPopulation():
 
     # Formats the colorbar
     fig.layout.coloraxis.colorbar.title = ''
-    #fig.update_coloraxes(colorbar_title_font_size=40)
+    fig.update_coloraxes(colorbar_title_font_size=40)
     fig.update_coloraxes(colorbar_title_side="top")
     fig.layout.coloraxis.colorbar.orientation = 'h'
     fig.layout.coloraxis.colorbar.len = 0.2
@@ -109,11 +110,11 @@ def PlotAreesBasiquesMapPopulation():
 
     # Formats the colorbar
     fig.layout.coloraxis.colorbar.title = ''
-    #fig.update_coloraxes(colorbar_title_font_size=40)
+    fig.update_coloraxes(colorbar_title_font_size=40)
     fig.update_coloraxes(colorbar_title_side="top")
     fig.layout.coloraxis.colorbar.orientation = 'h'
     fig.layout.coloraxis.colorbar.len = 0.2
-    fig.update_coloraxes(colorbar_tickfont_size=16)
+    #fig.update_coloraxes(colorbar_tickfont_size=16)
   
     fig.update_layout(coloraxis_colorbar_x=0.7)
     fig.update_layout(coloraxis_colorbar_y=0.1)
