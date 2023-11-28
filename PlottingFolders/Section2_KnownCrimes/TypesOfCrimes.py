@@ -101,8 +101,8 @@ other_types = ['Delictes contra la seguretat viària','Dels delictes contra la s
 
 '''
                
-df_fets = pd.read_csv(Folder_DadesPolicials+ "Fets_penals_coneguts.csv")
-df_fets = df_fets[ df_fets["Any"] == 2022]
+df_fets_0 = pd.read_csv(Folder_DadesPolicials+ "Fets_penals_coneguts.csv")
+df_fets = df_fets_0[ df_fets_0["Any"] == 2022]
 
 
 n_persones, n_property, n_other = 0.0,0.0,0.0
@@ -188,7 +188,7 @@ MetroBarcelona, MetroNord, MetroSud, Ebre, Pirineu= 0,0,0,0,0
 Ponent, Central, Girona, Tarragona = 0,0,0,0
 
 
-for crime in publicdisorder: 
+for crime in InjuriesThreats: 
     df = df_fets[df_fets["Tipus de fet"] == crime]
     df_metrobar = df[df["Regió Policial (RP)"] == "RP Metropolitana Barcelona"]
     df_metrosud = df[df["Regió Policial (RP)"] == "RP Metropolitana Sud"]
@@ -233,15 +233,162 @@ vec = [MetroBarcelona/pob_metrobar, MetroSud/pob_metrosud,
                             Girona/pob_girona, Tarragona/pob_tarragona,
                             Central/pob_central, Pirineu/pob_pirineu,
                             Ebre/pob_ebre, Ponent/pob_ponent]
-print("Average: ", np.mean(vec),   "    Max: ", np.max(vec), "    Min: ", np.min(vec))
+total = np.sum(vec)
 
-        
-print("Metro Barcelona: ", MetroBarcelona, MetroBarcelona/pob_metrobar)
-print("Metro Sud: ", MetroSud, MetroSud/pob_metrosud)
-print("Metro Nord: ", MetroNord, MetroNord/pob_metronord)
-print("Girona: ",Girona, Girona/pob_girona)
-print("Tarragona: ",Tarragona, Tarragona/pob_tarragona)
-print("Central: ",Central, Central/pob_central)
-print("Pirineu: ",Pirineu,  Pirineu/pob_pirineu)
-print("Ebre: ",Ebre, Ebre/pob_ebre)
-print("Ponent: ",Ponent, Ponent/pob_ponent)
+print("Metro Barcelona: ", MetroBarcelona, 100/total * MetroBarcelona/pob_metrobar)
+print("Metro Sud: ", MetroSud, 100/total * MetroSud/pob_metrosud)
+print("Metro Nord: ", MetroNord,  100/total *MetroNord/pob_metronord)
+print("Girona: ",Girona, 100/total * Girona/pob_girona)
+print("Tarragona: ",Tarragona,  100/total *Tarragona/pob_tarragona)
+print("Central: ",Central,  100/total *Central/pob_central)
+print("Pirineu: ",Pirineu,  100/total * Pirineu/pob_pirineu)
+print("Ebre: ",Ebre, 100/total * Ebre/pob_ebre)
+print("Ponent: ",Ponent,  100/total *Ponent/pob_ponent)
+print()
+print("    Max: ", 100/total * np.max(vec), "    Min: ", 100/total * np.min(vec))
+
+
+# ----------------- Time evolution of Crimes ---------------------- # 
+
+yearv = [ 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+
+v_people, v_murder, v_sex, v_hate, v_injury = [],[],[],[],[]
+v_property, v_Theft, v_robbery, v_damage, v_scam = [],[],[],[],[]
+v_other, v_police, v_driving, v_public = [],[],[],[]
+
+for year in yearv: 
+    df_fets = df_fets_0[ df_fets_0["Any"] == year]
+
+    # ---------- Against people ---------------- # 
+    ncrimes = 0
+    for crime in against_people: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_people += [ncrimes]
+
+    ncrimes = 0
+    for crime in Murder: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_murder += [ncrimes]
+
+    ncrimes = 0
+    for crime in Sexual_Assault: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_sex += [ncrimes]
+
+    ncrimes = 0
+    for crime in InjuriesThreats: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_injury += [ncrimes]
+    
+    ncrimes = 0
+    for crime in FreedomHate: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_hate += [ncrimes]
+
+    # ---------- Against property ---------------- # 
+    
+    ncrimes = 0
+    for crime in against_property: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_property += [ncrimes]
+
+    ncrimes = 0
+    for crime in RobberyBulgary: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_robbery += [ncrimes]
+
+    ncrimes = 0
+    for crime in Theft: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_Theft += [ncrimes]
+
+    for crime in Damage: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_damage += [ncrimes]
+    
+    ncrimes = 0
+    for crime in Scams: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_scam += [ncrimes]
+
+    # ---------- Other Crimes ---------------- # 
+    
+    ncrimes = 0
+    for crime in other_types: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_other += [ncrimes]
+
+    ncrimes = 0
+    for crime in against_police: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_police += [ncrimes]
+
+    ncrimes = 0
+    for crime in driving: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_driving += [ncrimes]
+
+    ncrimes = 0
+    for crime in publicdisorder: 
+        df = df_fets[df_fets["Tipus de fet"] == crime]
+        ncrimes += np.sum(df["Coneguts"].values)
+    v_public += [ncrimes]
+
+
+# Plotting
+#
+
+import matplotlib.pyplot as plt
+print()
+print("Crimes with time: ")
+
+fig, ax = plt.subplots(3, figsize=(9,9))
+
+# Poeple
+# 
+ax[0].set_title("Crimes against people", fontsize=14)
+ax[0].plot(yearv, v_people, marker="s", ms=6, label="Total", color="darkred")
+ax[0].plot(yearv, v_murder, marker="o",ms=8,label="Murder", color="indianred")
+ax[0].plot(yearv, v_sex, marker="^",ms=8,label="Sexual",color="tomato")
+ax[0].plot(yearv, v_hate, marker=">",ms=8,label="Hate", color="darkorange")
+ax[0].plot(yearv, v_injury,marker="<",ms=8, label= "Injuries and Threats", color="gold")
+ax[0].set_xlabel("Years", fontsize=14)
+ax[0].legend(bbox_to_anchor=(1.1, 1.05), fontsize=14)
+ax[0].set_ylabel("Number of Crimes", fontsize=14)
+ax[0].tick_params(axis='both', labelsize=14)
+
+ax[1].set_title("Crimes against property", fontsize=14)
+ax[1].plot(yearv, v_property, marker="s",ms=6,label="Total", color="darkolivegreen")
+ax[1].plot(yearv, v_Theft, marker="o",ms=8,label="Theft", color="forestgreen")
+ax[1].plot(yearv, v_robbery,marker="^", ms=8,label="Robbery", color="mediumseagreen")
+ax[1].plot(yearv, v_damage, marker=">",ms=8,label="Damage", color="limegreen")
+ax[1].plot(yearv, v_scam, marker="<",ms=8,label="Scam", color="springgreen")
+ax[1].set_xlabel("Years", fontsize=14)
+ax[1].legend(bbox_to_anchor=(1.1, 1.05), fontsize=14)
+ax[1].set_ylabel("Number of Crimes", fontsize=14)
+ax[1].tick_params(axis='both', labelsize=14)
+
+ax[2].set_title("Other Crimes", fontsize=14)
+ax[2].plot(yearv, v_other,marker="s",ms=6, label="Total", color="navy")
+ax[2].plot(yearv, v_police, marker="o",ms=8,label="Against Police", color="royalblue")
+ax[2].plot(yearv, v_driving, marker="^",ms=8,label="Driving",color="dodgerblue")
+ax[2].plot(yearv, v_public,marker=">", ms=8,label="Public Disorder",color="aqua")
+ax[2].set_xlabel("Years", fontsize=14)
+ax[2].legend(bbox_to_anchor=(1.1, 1.05), fontsize=14)
+ax[2].set_ylabel("Number of Crimes", fontsize=14)
+ax[2].tick_params(axis='both', labelsize=14)
+plt.tight_layout()
+plt.show()
