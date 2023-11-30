@@ -19,7 +19,7 @@ for k in range(0,len(df_poblacio["REGIO_D"].values)):
     asd = df_policia[(df_policia["Àmbit territorial"] == names[-1]) & (df_policia["Sexe"] == "Dona")]
     qwe = df_policia[(df_policia["Àmbit territorial"] == names[-1]) & (df_policia["Sexe"] == "Home")]
 
-    label += [df_poblacio["REGIO_C"].values[k]]
+    label += [df_poblacio["REGIO_D"].values[k]]
     
 
     if (len(qwe["Mosso/a"].values) > 0) and (len(asd["Mosso/a"].values)>0):
@@ -74,4 +74,6 @@ ax2.set_xticklabels(label,rotation=45,fontsize=10)
 ax2.legend()
 plt.tight_layout()
 
+
+print(np.mean([48.5,37.08,34.024,28.52,25.77,29.37,31.90,38.14,38.61]))
 plt.show()  
