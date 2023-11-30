@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+h1 {
+    .MainTitle {
+        color: rgb(9, 145, 175);
+        text-align: center;
+        font-family: sans-serif ;
+    }
+
+    }
+  
+h2 {
+    .subtitle{
+        color: rgb(122, 121, 121);
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .sectionTitle{
+        margin-top: 50px;
+        color: rgb(9, 145, 175);
+        text-align: justify;
+        font-family: sans-serif;
+        margin-left: 250px;
+        margin-right: 200px;
+    }
+  }
+
+hr {
+    margin-left: 200px;
+    margin-right: 200px;
+
+  }
+
+p {
+    margin-left: 250px;
+    margin-right: 200px;
+}
+
