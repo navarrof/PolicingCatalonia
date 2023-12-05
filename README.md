@@ -1,7 +1,7 @@
 
 
 
-# Catalonia Police Department
+## Catalonia Police Department
 
 Author's note: This document might undergo modifications as it is not yet completed.  
 
@@ -64,7 +64,23 @@ The Catalonia police divides its officials into the following ranks: Mosso, Capo
 
 *Figure 4: Percentage of women in the police force across various areas, both overall and when accounting for different ranks.*
 
-# 2. Information on Criminality Rates
+## 2. Information on Criminality Rates
+
+### 2.1 Evolution of the crimes known by the Catalan Police. 
+
+Figure 5 shows the evolution of known and solved crimes since 2011. The number of crimes appears to exhibit fluctuations from year to year. . We observe a minimum on the crime rates in 2020 and 2021. However, these numbers are evidently influenced by the impacts of the COVID-19 pandemic and should be taken with care. If one compares the solved crimes in 2019 and 2022, we see an overall improvement of a 3.45% in the rate of solved crimes. However, in this figure, variations in population along the years have not be considered.
+
+A more detailed study of the criminality in 2022 is shonw in Figure 6. The coloring lightness variation indicates qualitatively the population in each of the eareas in 2022. From this figure we can also see that the criminality rate (that is, number of known crimes divided by number of population) is the highest in the Metro nord area, and the lowest in the Pirineus area. In 2022 an average of 34.65% of the crimes were solved. The highest proportion of solved crimes took place in the Pirineus area with almost 50% of the crimes solved. It is unfair however to compare the number of solved crimes per area without considering what types of crimes were commited. This will be treated with more detail in the following sections. In red, the comparison between the rate of solved crimes in 2019 and 2022 is shownd. In all the cases there has been an increase in the proportion of solved crimes, indicating the increasing efforts of the police department. 
+
+![SolvedCrimes_year](https://github.com/navarrof/PolicingCatalonia/assets/54847307/c51929bf-f32a-48c9-9265-427f305bd13f)
+
+*Figure 5: Evolution of known and solved crimes in Catalunya since 2011.*
+
+![Regions](https://github.com/navarrof/PolicingCatalonia/assets/54847307/4c563c87-bd63-46fc-8cb4-726ea8a1e973)
+
+*Figure 6: Criminality rate of the different regions of catalonia. The numbers indicate (from top to bottom): number of known crimes divided by number of people living in that area, proportion of solved crimes, comparison of the rate of solved crimes between 2019 and 2022.* 
+
+### 2.2 Types of Crimes in Catalunya.  
 
 ## References
 

@@ -17,8 +17,33 @@ Firstly, we want to obtain the amount of population per territory, as well as th
     SELECT regio_c, regio_pob FROM Regions_policials_Poblacio
     SELECT abp_d, abp_pob from Arees_Basiques_Policials_Poblacio
 
-To determine the number of police offices per region. 
+To determine the number of police offices per region, we only need to change the name of the region (regio_c) in the following query.  
+
+    SELECT COUNT(*) from Comissaries_de_districte WHERE regio_c = "Metro Barcelona"
+
+To calculate the amount of population per police station we divide the population by the number of police stations in each region: 
+
+    SELECT (SELECT regio_pob FROM Regions_policials_Poblacio WHERE Regions_policials_Poblacio.REGIO_C = "MetroBarcelona") / (SELECT COUNT(*) from Comissaries_de_districte WHERE regio_c = "Metro Barcelona")
+
+This section also includes a study of the number of police officers per territorial area and its demographical study. For that, the  PersonalOperatiu file was used. First, we obtain the total number of police officers per region, adding all the different cathegories:
+
+    SELECT  "Mosso/a" + "Caporal/a" + "sergent/a" + "sotsinspector/a" + "inspector/a" + "comissari/ària" + "Major" FROM Personal_operatiu WHERE any = 2022 AND Àmbit_territorial = "RP Central"
+
+    
 
 
 
-Amount of population per police office. 
+
+
+
+SELECT * from Personal_operatiu where Personal_operatiu.any = 2022
+
+
+
+
+Now we do the same as before but separating between female and male police officers: 
+
+
+
+
+
