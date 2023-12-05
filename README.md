@@ -40,15 +40,34 @@ The data that was downloaded and used for this study corresponds to the website 
 
 Territorially, the Catalan police is divided into 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre). Figure 1 (left) shows the geographical location of each of the regions as well as the population as of 2022. The basic police areas are different divisions of the Catalonia police that are in charge of a specific geographic area and provide the basic police services to the population of that area [1]. Figure 1 (right) shows the territorial division of these basic police areas as well as the population in each one of them. 
 
+![Map](https://github.com/navarrof/PolicingCatalonia/assets/54847307/f2473838-1d3f-4d89-ba69-9596682b5d50)
+![ABP](https://github.com/navarrof/PolicingCatalonia/assets/54847307/556fd18a-e512-4d2e-9447-fabc89436d06)
 
-![Figure 1]("https://github.com/navarrof/PolicingCatalonia/assets/54847307/a3f25e99-3526-45e6-98b9-04c60d04513d")
-
-*Figure 1: Left, territorial division of the Catalan police. A: Pirineu, B: Ponent, C: Central, D: Ebre, E: Tarragona, F: Metropolitana Sud, G: Metropolitana Nord, H: Metropolitana Barcelona, I: Girona. Right, Geographical description of the basic police areas in Catalonia.*
-
-
+*Figure 1: Top, territorial division of the Catalan police. A: Pirineu, B: Ponent, C: Central, D: Ebre, E: Tarragona, F: Metropolitana Sud, G: Metropolitana Nord, H: Metropolitana Barcelona, I: Girona. Bottom, Geographical description of the basic police areas in Catalonia.*
 
 
+Some of the basic police areas are very complex or have to deal with a big amount of population. For this reason, the district police stations provide service to their corresponding basic police area. In [2] one can find the location of the various police offices in Catalunya as well as the necessary contact information. Figure 2 shows the number of police stations and the population in each of the 9 territorial regions in 2022. As expected, there is a significant correlation between the population in a territory and the number of police stations. The green line in Figure 2 indicates the average population that lies under the control of a given police station. For example, in the Ebre region, there are 5 police stations. Each of them is assigned to an amount of population. The average amount of population that needs to be handled for the police stations in Ebre is around 5000 people per police station. This representation might not be the best to assess the resources assigned to each of the regions, as the police stations can vary in size, that is, the amount of personnel assigned to that station. 
+
+![PoliceStations_Popuplation](https://github.com/navarrof/PolicingCatalonia/assets/54847307/7be22ecd-7a30-4b23-98c7-3e4e7907f4da)
+
+*Figure 2: For each of the territorial regions, population, number of police stations, and (in green) average population under the control of a given police station.*
+
+In figure 3, the amount of police personal assigned to each area in 2022 is shown. Unfortunatelly, there was no available data for the Metropolitana nord area. This figure reveals that the majority of the police personnel is stationed in the Metro Barcelona area, aligning with the concentration of the population in this region. The available information includes details on the rank of personnel and their gender, enabling a small gender study of the Catalan police. Additionally, in Figure 3, the number of police officers is presented, categorized by gender. It is unsurprising to note that female officers constitute a minority. The proportion of female officers seems to be consistent among the various areas, with a maximum of 25% representation in the Metro Barcelona, Central and Girona. 
+
+![PoliceOfficersLocation](https://github.com/navarrof/PolicingCatalonia/assets/54847307/eed9262d-7305-4f9a-9df0-634e1e6206da)
+
+*Figure 3: Number of police officers per area, categorized by gender.*
+
+The Catalonia police divides its officials into the following ranks: Mosso, Caporal, Sergent, Sotsinspector, Inspector, Intendent, and Major. With Mosso being the first basic level and Major being the maximum official degree in the scale. Figure 4 shows the proportion of female officers when considering their rank. From this figure we observe that the average of female representation when considering ranks superior to Capporal decreases even further, averaging a 10%. The biggest difference is when looking at the Metro politana sud area, where the percentage of female officers in high-ranking positions is significantly lower compared to the overall representation of women in the force.
+
+![FemaleProportion](https://github.com/navarrof/PolicingCatalonia/assets/54847307/20fb3cbf-0abd-4aff-b3fc-75f0e8727b89)
+
+*Figure 4: Percentage of women in the police force across various areas, both overall and when accounting for different ranks.*
+
+# 2. Information on Criminality Rates
 
 ## References
 
 [1] https://ca.wikipedia.org/wiki/%C3%80rea_B%C3%A0sica_Policial 
+
+[2] https://mossos.gencat.cat/.content/home/dadesobertes/comissaries/index.html?lang=en 
