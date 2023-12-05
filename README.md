@@ -1,8 +1,8 @@
-
+# Catalonia Police Department
 
 Author's note: This document might undergo modifications as it is not yet completed.  
 
-# A quick overview: 
+## A quick overview: 
 
 
 Catalonia is an autonomous community of Spain. It lies in the northeast of the Iberian Peninsula, to the south of the Pyrenees mountain range. The capital and largest city, Barcelona, is the second-most populated municipality in Spain and the fifth-most populous urban area in the European Union. The Mossos d’Escuadra is the police force of Catalonia, responsible for law enforcement in this autonomous area.
@@ -11,7 +11,7 @@ Here I present an exploratory analysis of the structure and organization of the 
 
 
 
-# Tools used for the analysis: 
+## Tools used for the analysis: 
 
  The analysis has been primarily performed using **python** . The libraries used are the following:
 
@@ -38,7 +38,7 @@ The data that was downloaded and used for this study corresponds to the website 
 Territorially, the Catalan police is divided into 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre). Figure 1 (left) shows the geographical location of each of the regions as well as the population as of 2022. The basic police areas are different divisions of the Catalonia police that are in charge of a specific geographic area and provide the basic police services to the population of that area [1]. Figure 1 (right) shows the territorial division of these basic police areas as well as the population in each one of them. 
 
 
-![Figure 1]("https://github.com/navarrof/blob/main/PlottingFolders/Section1_Maps/Map.png")
+![Figure 1]("https://raw.githubusercontent.com/navarrof/PolicingCatalonia/main/PlottingFolders/Section1_Maps/Map.png")
 
 *Figure 1: Left, territorial division of the Catalan police. A: Pirineu, B: Ponent, C: Central, D: Ebre, E: Tarragona, F: Metropolitana Sud, G: Metropolitana Nord, H: Metropolitana Barcelona, I: Girona. Right, Geographical description of the basic police areas in Catalonia.*
 
