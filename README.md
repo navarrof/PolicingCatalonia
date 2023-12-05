@@ -41,7 +41,7 @@ The data that was downloaded and used for this study corresponds to the website 
 Territorially, the Catalan police is divided into 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre). Figure 1 (left) shows the geographical location of each of the regions as well as the population as of 2022. The basic police areas are different divisions of the Catalonia police that are in charge of a specific geographic area and provide the basic police services to the population of that area [1]. Figure 1 (right) shows the territorial division of these basic police areas as well as the population in each one of them. 
 
 
-![Figure 1]("/docs/assets/Map.png")
+![Figure 1]("https://github.com/navarrof/PolicingCatalonia/assets/54847307/a3f25e99-3526-45e6-98b9-04c60d04513d")
 
 *Figure 1: Left, territorial division of the Catalan police. A: Pirineu, B: Ponent, C: Central, D: Ebre, E: Tarragona, F: Metropolitana Sud, G: Metropolitana Nord, H: Metropolitana Barcelona, I: Girona. Right, Geographical description of the basic police areas in Catalonia.*
 
