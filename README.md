@@ -5,11 +5,11 @@
 
 
 
-<div style="text-align: justify"> Author's note: This document might undergo modifications as it is not yet completed.  
+Author's note: This document might undergo modifications as it is not yet completed.  
 
 ### A quick overview: 
 
-<div style="text-align: justify">
+
 
 Catalonia is an autonomous community of Spain. It lies in the northeast of the Iberian Peninsula, to the south of the Pyrenees mountain range. The capital and largest city, Barcelona, is the second-most populated municipality in Spain and the fifth-most populous urban area in the European Union. The Mossos d’Escuadra is the police force of Catalonia, responsible for law enforcement in this autonomous area.
 
@@ -35,5 +35,16 @@ In this study, the public data available from the Catalonia police department ha
 
 The data that was downloaded and used for this study corresponds to the website update of 17/05/2022. All the data files are provided in **.csv** and **.json** format. For this study, both formats are used, depending on the convenience. 
 
-</div>
 
+
+## 1. Organizational Information. 
+
+
+
+Territorially, the Catalan police is divided into 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre). Figure 1 (left) shows the geographical location of each of the regions as well as the population as of 2022. The basic police areas are different divisions of the Catalonia police that are in charge of a specific geographic area and provide the basic police services to the population of that area [1]. Figure 1 (right) shows the territorial division of these basic police areas as well as the population in each one of them. 
+
+
+
+## References
+
+[1] https://ca.wikipedia.org/wiki/%C3%80rea_B%C3%A0sica_Policial 
