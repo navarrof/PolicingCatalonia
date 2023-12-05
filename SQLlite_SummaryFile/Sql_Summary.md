@@ -14,9 +14,11 @@ The .csv files were loaded as tables, with the first column being the table name
 
 Firstly, we want to obtain the amount of population per territory, as well as the population per basic police area. 
 
-
-
     SELECT regio_c, regio_pob FROM Regions_policials_Poblacio
     SELECT abp_d, abp_pob from Arees_Basiques_Policials_Poblacio
 
+To determine the number of police offices per region. 
 
+
+
+Amount of population per police office. 
