@@ -82,8 +82,28 @@ A more detailed study of the criminality in 2022 is shonw in Figure 6. The color
 
 ### 2.2 Types of Crimes in Catalunya.  
 
+Author's note: The results presented in this section should be approached with caution. The classification of the different crimes has been done following the official summaries presented by the Catalan police department [3]. However, in certain instances, the classification of the particular crime was unclear. I relied on my own judgment to classify it, recognizing that my classification may not be entirely accurate. 
+
+The details of the crime classification used in this analysis can be found in:
+
+    “…/PlottingFolders/Section2_KnownCrimes/TypesOfCrimes.py”
+
+Criminal acts in Catalonia are categorized into three different types: Crimes against people, crimes against property and other type of crimes. At the same time, each one of this type of crime has a series of subtypes that one could consider. The following schema shows how the crimes have been clasified for this analysis. In this schema one can also observe some percentages. This percentages indicate the proportion of crimes of this type in 2022 (blue) and 2019 (orange). 
+
+We can observe how the majority of the crimes are against the property, meaning, thefs, robberies, damages, etc. For the crimes against the people, we see that the majority of them are injuries or threats, while the minority are kidnappings, murders or freedom crimes. The other type of crime cathegory include a large variety of crims, for example crimes against the authority, driving related crimes and public security crimes. Among them, the most relevant crimes are the driving crimes and offenses. 
+
+When comparing the 2022 results to the 2019 results, we can observe a reduction on the crimes against the property, while an increase in the crimes against people and the other types of crimes. In particular, we observe an increase in the crimes of sexual nature and the driving related crimes. 
+
+![TypeCrime](https://github.com/navarrof/PolicingCatalonia/assets/54847307/6484ed37-e7b6-4eab-a700-5bba84f1e457)
+
+
+In order to see if there was any region iin catalonia more prompt to a certain type of crime, a geoghraphical analysis was performed. As a figure of merit, the proportion of crimes per population was used (number of crimes per person). In the following tables we show the areas where the majority and the minority of the crims of a certain type have been comitted. 
+
 ## References
 
 [1] https://ca.wikipedia.org/wiki/%C3%80rea_B%C3%A0sica_Policial 
 
 [2] https://mossos.gencat.cat/.content/home/dadesobertes/comissaries/index.html?lang=en 
+
+[3] https://mossos.gencat.cat/ca/els_mossos_desquadra/indicadors_i_qualitat/estadistica/
+
